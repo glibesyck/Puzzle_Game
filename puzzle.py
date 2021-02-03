@@ -1,5 +1,7 @@
 '''
 Puzzle Game!
+Github :
+https://github.com/glibesyck/Puzzle_Game.git
 '''
 
 def row (board : list) -> bool :
