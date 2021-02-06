@@ -3,7 +3,7 @@ Puzzle Game!
 Github :
 https://github.com/glibesyck/Puzzle_Game.git
 '''
-
+import doctest
 def row (board : list) -> bool :
     '''
     Return True if there are only different numbers on horizontal lines of
@@ -85,10 +85,10 @@ def color (colors : list) -> bool:
             result = False
     return result
 
-def valite_board (board : list) -> bool:
+def validate_board (board : list) -> bool:
     '''
     Return True if board is ready to play and False otherwise.
-    >>> valite_board(["**** ****", "***1 ****", "**  3****", "* 4 1****",\
+    >>> validate_board(["**** ****", "***1 ****", "**  3****", "* 4 1****",\
 "     9 5 ", " 6  83  *", "3   1  **", "  8  2***", "  2  ****"])
     False
     '''
@@ -96,3 +96,4 @@ def valite_board (board : list) -> bool:
     if color(creating_color_lists(board)) and row(board) and column(board) :
         result = True
     return result
+doctest.testmod()
